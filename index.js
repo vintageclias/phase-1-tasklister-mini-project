@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (taskDescription) {
       const taskItem = document.createElement('li');
-      taskItem.textContent = taskDescription;
+
+      // Display both description and priority in the task item
+      taskItem.textContent = `${taskDescription} (Priority: ${priority})`;
 
       switch (priority) {
           case 'high':
